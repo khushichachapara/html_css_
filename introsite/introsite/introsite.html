@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="pic.png" />
+    <script src="main.js"></script>
+    <title>INTROSITE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @media (max-width: 450px) {
+        header,
+        footer {
+          width: 100%;
+        }
+      }
+
+      html {
+        padding: 2px;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background: rgb(202, 10, 121);
+        background: linear-gradient(
+          16deg,
+          rgba(202, 10, 121, 1) 8%,
+          rgba(213, 64, 156, 1) 29%,
+          rgba(159, 60, 128, 1) 50%
+        );
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-radius: 5px;
+      }
+      h1 {
+        padding: 1rem;
+        font-size: 2.5rem;
+        color: rgb(224, 220, 235);
+      }
+      h1:hover {
+        cursor: pointer;
+        font-size: 2.55rem;
+      }
+
+      h1::before {
+        content: "Khushi's";
+        font-family: "Font Awesome 6 Free";
+        font-size: 0.6rem;
+        display: flex;
+        margin-left: 10px;
+        letter-spacing: 10px;
+        color: black;
+        font-variant: small-caps;
+      }
+
+      h1::after {
+        content: "\3e";
+        font-family: "Font Awesome 6 Free";
+        font-size: 1.7rem;
+        font-weight: 500;
+        margin-left: 10px;
+        display: inline-block;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        margin-top: 0.8rem;
+      }
+      li {
+        padding: 1rem;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-shadow: 1px 1px #020202;
+        font-family: "Lato", serif;
+        color: white;
+      }
+      ul li:hover {
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
+      section {
+        border-radius: 5px;
+        margin: 0.19rem 0;
+        padding: 1rem;
+        height: 100vh;
+      }
+      .contant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      footer {
+        background: rgb(202, 10, 121);
+        background: linear-gradient(
+          16deg,
+          rgba(202, 10, 121, 1) 8%,
+          rgba(213, 64, 156, 1) 29%,
+          rgba(159, 60, 128, 1) 50%
+        );
+        text-align: center;
+        position: relative;
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-family: "Lato", serif;
+        font-weight: 600;
+        color: white;
+        border-radius: 5px;
+      }
+      footer > h3 {
+        text-decoration: 1px underline;
+        text-underline-offset: 3px;
+      }
+      .link {
+        padding-top: 0.5rem;
+      }
+      .link a {
+        padding: 1rem;
+        color: darkblue;
+      }
+
+      .link a:active {
+        color: white;
+      }
+      .img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        box-shadow: 4px 2px 5px 5px rgb(244, 65, 158);
+      }
+      .second {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        margin-top: 30px;
+      }
+      .second i {
+        font-size: 9rem;
+        transition: transform 0.3s ease;
+      }
+      @media (max-width: 600px) {
+        .second {
+          grid-template-columns: repeat(2, 1fr); /* 2 columns */
+          gap: 0.5rem;
+        }
+        .second i {
+          font-size: 5rem; /* Even bigger icons on mobile */
+        }
+      }
+      h2 {
+        margin: 1rem;
+      }
+      .html-icon {
+        color: #e44d26;
+        text-shadow: 4px 4px 10px rgba(228, 77, 38, 0.5);
+      }
+
+      .css-icon {
+        color: #1572b6;
+        text-shadow: 4px 4px 10px rgba(21, 114, 182, 0.5);
+      }
+
+      .js-icon {
+        color: #f7df1e;
+        text-shadow: 4px 4px 10px rgba(247, 223, 30, 0.5);
+      }
+
+      .react-icon {
+        color: #61dbfb;
+        text-shadow: 4px 4px 10px rgba(97, 219, 251, 0.5);
+      }
+
+      /* Hover effect */
+      .second i:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+      }
+      .mywork{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>IntroSite</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>home</li>
+          <li>about</li>
+          <li>work</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="mainsection">
+      <div class="first">
+        <div class="img">
+          <img
+            src="icon.png"
+            alt="Khushi Chachapara"
+            style="width: 15rem; height: 15rem; border-radius: 50%"
+          />
+        </div>
+        <div class="contant">
+          <h2>Hi, I'm Khushi Chachapara!</h2>
+          <p>
+            I am a passionate MCA student, web developer, and tech enthusiast.
+          </p>
+        </div>
+      </div>
+      <h2 style="text-align: center">My Skills</h2>
+
+      <div class="second">
+        <i class="fa-brands fa-html5 html-icon"></i>
+        <i class="fa-brands fa-css3 css-icon"></i>
+        <i class="fa-brands fa-js js-icon"></i>
+        <i class="fa-brands fa-react react-icon"></i>
+      </div>
+      <div class="mywork">
+        <h2>My Work</h2>
+      </div>
+    </section>
+    <footer>
+      <h3 style="font-size: 1rem; letter-spacing: 0.3rem">
+        &copy;2025-All Right Reserve
+      </h3>
+      <div class="link">
+        <a
+          href="https://www.linkedin.com/in/khushi-chachapara-5b052b293"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i> Linkdin
+        </a>
+        <a href="https://github.com/khushichachapara" target="_blank">
+          <i class="fa-brands fa-github"></i> Github</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
